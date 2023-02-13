@@ -49,7 +49,7 @@ class SettingsFragment:Fragment() {
             activity?.recreate()
         }
 
-        val edit = binding.proba1.text.toString()
+        val edit = binding?.proba1?.text.toString()
 
         binding?.dugmeProba?.setOnClickListener {
 
