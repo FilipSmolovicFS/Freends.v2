@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Freends</string>
+    <string name="submit">Submit</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="logo">Logo</string>
+    <string name="posts">Posts</string>
+    <string name="profile">Profile</string>
+    <string name="test_email">test@test.com</string>
+    <string name="about_profile">About</string>
+    <string name="username_profile">filipsmolovic</string>
+    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.</string>
+    <string name="in_the_making">IN THE MAKING...</string>
+    <string name="settings">Settings</string>
+    <string name="search">Search</string>
+    <string name="logout">LogOut</string>
+    <string name="title_placeholder">Title/Username</string>
+    <string name="tag_placeholder">#tag</string>
+    <string name="bottomsheet">BottomSheet</string>
+    <string name="mode_light">LightMode</string>
+    <string name="mode_dark">DarkMode</string>
+
+</resources>

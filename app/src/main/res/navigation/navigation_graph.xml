@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.practice.LoginFragment"
+        android:label="login"
+        tools:layout="@layout/login" >
+        <action
+            android:id="@+id/action_login_to_posts"
+            app:destination="@id/posts"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/posts"
+        android:name="com.example.practice.PostsFragment"
+        android:label="posts_page"
+        tools:layout="@layout/posts_page" >
+        <action
+            android:id="@+id/action_posts_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.practice.ProfileFragment"
+        android:label="profile_page"
+        tools:layout="@layout/profile_page" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.practice.overview.SettingsFragment"
+        android:label="SettingsFragment" >
+        <action
+            android:id="@+id/action_settingsFragment_to_login"
+            app:destination="@id/login" />
+    </fragment>
+</navigation>

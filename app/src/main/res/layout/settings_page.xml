@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="@string/mode_light"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:drawablePadding="5dp"
+        app:drawableStartCompat="@drawable/baseline_light_mode_24" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/logout"
+        app:layout_constraintTop_toTopOf="@+id/logout"
+        android:layout_marginStart="15dp"/>
+
+    <TextView
+        android:id="@+id/bottom_sheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bottomsheet"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        app:layout_constraintTop_toBottomOf="@+id/logout"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:drawablePadding="5dp"
+        app:drawableLeftCompat="@drawable/baseline_domain_verification_24" />
+
+    <TextView
+        android:id="@+id/leave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/logout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet"
+        android:layout_marginTop="16dp"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="132dp"
+        android:drawablePadding="5dp"
+        app:drawableLeftCompat="@drawable/baseline_logout_24" />
+    <EditText
+        android:id="@+id/proba1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/leave"
+        android:hint="@string/email" />
+    <Button
+        android:id="@+id/dugme_proba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/proba1"
+        android:text="submit"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
