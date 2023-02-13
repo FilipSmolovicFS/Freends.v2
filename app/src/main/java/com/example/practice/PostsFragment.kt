@@ -9,9 +9,10 @@ import com.example.practice.databinding.PostsPageBinding
 import com.example.practice.overview.OverviewViewModel
 import com.example.practice.overview.PhotoGridAdapter
 import com.example.practice.overview.PostsAdapter
+import com.example.practice.overview.RecyclerViewInterface
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class PostsFragment: androidx.fragment.app.Fragment() {
+class PostsFragment: androidx.fragment.app.Fragment(){
 
     private var _binding: PostsPageBinding? = null
     private val binding get() = _binding
@@ -44,4 +45,5 @@ class PostsFragment: androidx.fragment.app.Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
 }

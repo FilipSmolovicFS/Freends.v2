@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentResultListener
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.NavController
@@ -22,7 +23,7 @@ class ProfileFragment: Fragment() {
     private val navController = NavController
 
 
-    private val viewModel: OverviewViewModel by viewModels()
+    private val viewModel: OverviewViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -43,8 +44,9 @@ class ProfileFragment: Fragment() {
 
 //        binding?.textView2?.text = viewModel.test.toString()
 
-        val test = viewModel.test.toString()
-        binding?.textView2?.text = test
+        viewModel.test.observe(viewLifecycleOwner, Observer { user ->
+            binding?.textView2?.text = user
+        })
 
         return root
     }

@@ -11,7 +11,7 @@ import com.example.practice.network.Content
 
 
 class PostsAdapter :
-    ListAdapter<Content, PostsAdapter.ContentPhotosViewHolder>(DiffCallback) {
+    ListAdapter<Content, PostsAdapter.ContentPhotosViewHolder>(PhotoGridAdapter){
 
     class ContentPhotosViewHolder(
         private var binding: PostsItemBinding
@@ -45,4 +45,6 @@ class PostsAdapter :
         val contentPhoto = getItem(position)
         holder.bind(contentPhoto)
     }
+
+
 }

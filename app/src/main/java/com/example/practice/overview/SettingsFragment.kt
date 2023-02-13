@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -27,7 +28,7 @@ class SettingsFragment:Fragment() {
 
     private val bottomSheetFragment = BottomSheetFragment()
 
-    private val viewModel : OverviewViewModel by viewModels()
+    private val viewModel : OverviewViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -52,7 +53,7 @@ class SettingsFragment:Fragment() {
         val edit = binding?.proba1?.text.toString()
 
         binding?.dugmeProba?.setOnClickListener {
-
+            viewModel.updateUser(binding!!.proba1.text.toString())
         }
 
 

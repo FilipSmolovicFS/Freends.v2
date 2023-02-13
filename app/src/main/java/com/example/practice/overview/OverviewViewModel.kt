@@ -22,7 +22,7 @@ class OverviewViewModel:ViewModel() {
     private val _profilePic = MutableLiveData<Content>()
     val profilePic : LiveData<Content> = _profilePic
 
-    private val _test = MutableLiveData<String>()
+    private val _test = MutableLiveData("Username")
     val test : LiveData<String>
     get() = _test
 
