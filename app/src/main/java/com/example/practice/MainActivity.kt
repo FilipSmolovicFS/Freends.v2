@@ -1,12 +1,10 @@
 package com.example.practice
 
 import android.content.Context
-import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.databinding.DataBindingUtil.setContentView
 import androidx.fragment.app.Fragment
 import com.example.practice.databinding.ActivityMainBinding
 import com.example.practice.overview.SettingsFragment
@@ -38,6 +36,7 @@ class MainActivity : AppCompatActivity(), LoginFragment.LoginFragmentInterface {
             when(it.itemId){
 
                 R.id.profile -> replaceFragment(ProfileFragment())
+                R.id.search -> replaceFragment(SinglePostFragment())
                 R.id.posts -> replaceFragment(PostsFragment())
                 R.id.settings-> replaceFragment(SettingsFragment())
 

@@ -38,4 +38,8 @@
             android:id="@+id/action_settingsFragment_to_login"
             app:destination="@id/login" />
     </fragment>
+    <fragment
+        android:id="@+id/singlePostFragment"
+        android:name="com.example.practice.SinglePostFragment"
+        android:label="SinglePostFragment" />
 </navigation>

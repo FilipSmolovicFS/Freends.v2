@@ -26,9 +26,7 @@
         <item name="android:fontFamily">@font/playball</item>
     </style>
 
-    <style name="proba" parent="">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSizeTopRight">20dp</item>
-        <item name="cornerSizeTopLeft">20dp</item>
+    <style name="proba">
+        <item name="android:background">@color/purple_200</item>
     </style>
 </resources>
