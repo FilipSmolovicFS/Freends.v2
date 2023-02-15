@@ -5,12 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.practice.databinding.GridViewItemBinding
 import com.example.practice.databinding.PostsItemBinding
 import com.example.practice.network.Content
 
 
-class PostsAdapter :
+class PostsAdapter(private  val listener: PostsAdapterInterface) :
     ListAdapter<Content, PostsAdapter.ContentPhotosViewHolder>(PhotoGridAdapter){
 
     class ContentPhotosViewHolder(
@@ -43,7 +42,14 @@ class PostsAdapter :
 
     override fun onBindViewHolder(holder: ContentPhotosViewHolder, position: Int) {
         val contentPhoto = getItem(position)
+        holder.itemView.setOnClickListener{
+            listener.onImageClicked()
+        }
         holder.bind(contentPhoto)
+    }
+
+    interface PostsAdapterInterface{
+        fun onImageClicked()
     }
 
 

@@ -26,7 +26,4 @@
         <item name="android:fontFamily">@font/playball</item>
     </style>
 
-    <style name="proba">
-        <item name="android:background">@color/purple_200</item>
-    </style>
 </resources>

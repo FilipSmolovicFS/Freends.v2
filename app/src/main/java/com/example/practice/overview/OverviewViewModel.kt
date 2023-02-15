@@ -10,6 +10,7 @@ import com.example.practice.R
 import com.example.practice.network.Content
 import com.example.practice.network.ContentApi
 import kotlinx.coroutines.launch
+import java.util.Currency
 
 class OverviewViewModel:ViewModel() {
 
@@ -26,9 +27,14 @@ class OverviewViewModel:ViewModel() {
     val test : LiveData<String>
     get() = _test
 
+    private var _currentPost = MutableLiveData<Content>()
+    val currentPost : LiveData<Content>
+    get() = _currentPost
+
     init {
         getContent()
     }
+
 
 
     private fun getContent() {
@@ -48,6 +54,10 @@ class OverviewViewModel:ViewModel() {
 
     fun updateUser(user: String){
         _test.value = user
+    }
+
+    fun openCurrentPost(image: Content){
+        _currentPost.value = image
     }
 
 }

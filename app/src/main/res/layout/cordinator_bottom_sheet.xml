@@ -6,7 +6,7 @@
     android:paddingTop="10dp"
     android:id="@+id/bottomSheet"
     app:behavior_hideable="false"
-    app:behavior_peekHeight="200dp"
+    app:behavior_peekHeight="210dp"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -65,35 +65,38 @@
 
                         <TextView
                             android:id="@+id/tags"
-                            android:text="#proba #proba"
-                            android:textAlignment="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"/>
+                            android:text="#proba #proba"
+                            android:textAlignment="center"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
                             android:id="@+id/likes"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            android:gravity="center"
-                            android:drawablePadding="4dp"
                             android:drawableLeft="@drawable/baseline_favorite_border_24"
-                            android:text="5.4k"/>
+                            android:drawablePadding="4dp"
+                            android:gravity="center"
+                            android:text="5.4k"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
                             android:id="@+id/comments_count"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintEnd_toStartOf="@id/likes"
-                            android:gravity="center"
                             android:layout_marginEnd="8dp"
-                            android:drawablePadding="4dp"
                             android:drawableLeft="@drawable/baseline_chat_bubble_outline_24"
-                            android:text="5.4k"/>
+                            android:drawablePadding="4dp"
+                            android:gravity="center"
+                            android:text="5.4k"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toStartOf="@id/likes"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
                             android:id="@+id/title_bottom_sheet"
@@ -103,6 +106,12 @@
                             android:layout_marginTop="8dp"
                             android:text="Comments"
                             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"/>
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/title_bottom_sheet"
+                            app:dividerColor="@color/devider_main"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -9,7 +9,8 @@ import androidx.fragment.app.Fragment
 import com.example.practice.databinding.ActivityMainBinding
 import com.example.practice.overview.SettingsFragment
 
-class MainActivity : AppCompatActivity(), LoginFragment.LoginFragmentInterface {
+class MainActivity : AppCompatActivity(), LoginFragment.LoginFragmentInterface,
+    PostsFragment.PostsFragmentInterface {
 
     private lateinit var binding : ActivityMainBinding
 
@@ -36,7 +37,6 @@ class MainActivity : AppCompatActivity(), LoginFragment.LoginFragmentInterface {
             when(it.itemId){
 
                 R.id.profile -> replaceFragment(ProfileFragment())
-                R.id.search -> replaceFragment(SinglePostFragment())
                 R.id.posts -> replaceFragment(PostsFragment())
                 R.id.settings-> replaceFragment(SettingsFragment())
 
@@ -63,5 +63,10 @@ class MainActivity : AppCompatActivity(), LoginFragment.LoginFragmentInterface {
     override fun onLoginBtnClicked() {
         replaceFragment(PostsFragment())
     }
+
+    override fun onNavigation(fragment: Fragment) {
+        replaceFragment(fragment)
+    }
+
 
 }
